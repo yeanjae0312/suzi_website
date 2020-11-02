@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="./css/career.css" type="text/css">
+       <link rel="stylesheet" href="./css/swiper.min.css" type="text/css">
+       
+       <h3>career</h3>
+       
+       <div class="swiper-container">
+           <div class="swiper-wrapper">
+              
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_startup.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">tvN 2020 드라마 스타트업 '서달미' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_begabond.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">SBS 2019 드라마 배가본드 '고해리' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_d.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">SBS 2017 드라마 당신이 잠든사이에 드라마 '남홍주' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_h.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">KBS 2016 드라마 함부로 애틋하게 '노을' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_goo.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">MBC 2013 드라마 구가의 서 '담여울' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_big.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">KBS 2012 드라마 빅 '장마리' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_dream.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">KBS 2011 드라마 드림하이 '고혜미' 역</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_bak.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">2019 영화 "백두산"</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_do.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">2015 영화 "도리화가"</div>
+                   </div>
+               </div>
+               
+               <div class="swiper-slide">
+                   <img src="./images/career/suzi_gun.jpg" alt="">
+                   <div class="txtBg">
+                       <div class="txt">2012 영화 "건축학개론"</div>
+                   </div>
+               </div>
+               
+           </div>
+       </div>
+       
+       <!-- 서브페이지에서만 사용하는 내비게이션 -->
+           <nav class="sub_nav">
+               <ul>
+                   <li><a href="#">Profile</a></li>
+                   <li><a href="#">News</a></li>
+                   <li><a href="#">Gallery</a></li>
+                   <li><a href="#">Discography</a></li>
+                   <li class="active"><a href="#">Career</a></li>
+                   <li><a href="#">Schedule</a></li>
+               </ul>
+           </nav>
+       
+       <!-- 슬라이드 좌,우 버튼 -->
+       <div class="swiper-button-prev"></div>
+       <div class="swiper-button-next"></div>
+       
+       <!-- 스와이퍼 슬라이드 스크립트 소스 -->
+       <script src="./script/swiper.min.js"></script>
+       
+       <script>
+        var swiper = new Swiper('.swiper-container',{
+            slidesPerView:1, 
+            slidesPerColumn:2, //1칸에 2장의 이미지
+            spaceBetween:30, //간격
+            navigation:{
+                nextEl:'.swiper-button-next',
+                prevEl:'.swiper-button-prev',
+            },
+            breakpoints:{
+                1400:{
+                    slidesPerView:4,
+                    slidesPerColumn:2, //한칸에 두개씩
+                },
+                965:{
+                    slidesPerView:3,
+                    slidesPerColumn:2,
+                },
+                560:{
+                    slidesPerView:2,
+                    slidesPerColumn:2,
+                }
+            
+            }
+        });
+           
+           //마우스 오버 애니메이션
+        $('.sub_nav > ul > li').hover(function(){
+            $(this).toggleClass('hover');
+            $(this).siblings().toggleClass('opa');
+        });
+        
+        //메뉴 클릭시 해당하는 페이지를 load하기
+        $('.sub_nav > ul > li:eq(0) > a').click(function(){
+            subLink('./sub/profile.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(1) > a').click(function(){
+            subLink('./sub/news.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(2) > a').click(function(){
+            subLink('./sub/gallery.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(3) > a').click(function(){
+            subLink('./sub/discography.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(4) > a').click(function(){
+            return false;
+        });
+        
+        $('.sub_nav > ul > li:eq(5) > a').click(function(){
+            subLink('./sub/schedule.html');
+        });
+        
+        //클릭한 a요소의 주소를 받아서 함수에 넘겨준다.
+        function subLink(url){
+            //위에서 받은 매개변수값을 아래에 삽입하여 페이지가 나오게 한다.
+            $('section').load(url);
+        }
+       </script>
+      

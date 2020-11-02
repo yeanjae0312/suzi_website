@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+<!--    meta:vp-->
+<!--    meta:compat-->
+    <title>연계 프로젝트 구현 - suzi</title>
+    
+    <!-- css삽입 -->
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/base.css" type="text/css">
+    <!-- 공통 레이아웃 -->
+    <link rel="stylesheet" href="./css/layout.css" type="text/css">
+    <!-- 메인 레이아웃 -->
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- 웹폰트(noto sans)삽입 -->
+    <link rel="stylesheet" href="./css/css2.css" type="text/css">
+    <!-- 패럴랙스 스타일시트 삽입 -->
+    <link rel="stylesheet" href="./css/jquery.parallax.css" type="text/css">
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="./images/suzi_farvicon_EKO_icon.ico">
+    
+    
+    <!-- 자바스크립트 & 제이쿼리 -->
+    <script src="./script/jquery-1.11.1.min.js"></script>
+    <!-- 아이콘폰트 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- 패럴랙스 제이쿼리 삽입 -->
+    <script src="./script/jquery.parallax.js"></script>
+    <!-- 배경 노이즈 효과 스크립트 -->
+    <script src="./script/noise.js"></script>
+    <!-- layout 스크립트 -->
+    <script src="./script/layout.js"></script>
+    <!-- main 스크립트 = 메인 페럴렉스, 영상사이즈 조정 -->
+    <script src="./script/main.js"></script>
+    <!-- link 스크립트 연결 -->
+    <script src="./script/link.js"></script>
+    
+    
+    
+</head>
+<body id="port">
+   <!-- 배경 노이즈 효과 -->
+   <canvas id="noise" class="noise"></canvas>
+   
+   <header class="clearfix">
+       <h1><a href="index.html" title="메인페이지로 바로가기"><span>S</span>U<span>Z</span>I</a></h1>
+       
+       <!-- 우측 토글버튼 -->
+       <div class="toggle">
+           <div class="bar"></div>
+           <div class="bar"></div>
+           <div class="bar"></div>
+       </div>
+       
+   </header>
+   
+   
+   <section>
+     
+      <!-- 배경에 영상 삽입 -->
+      <div class="bgMovie parallax-layer">
+         
+          <video preload="auto" autoplay="autoplay" muted="muted" loop="">
+              <source src="./img/suzi_guess_1.mp4" type="video/mp4">
+              
+          </video>
+      </div>
+      
+      <!-- 메인화면에 나오는 메뉴 -->
+      <nav class="gnb_main parallax-layer">
+          <ul>
+              <li>
+                  <a href="#" title="">Profile</a>
+                  <!-- 마우스 오버시 나오는 글자 -->
+                  <span class="fill">Profile</span>
+              </li>
+              
+              <li>
+                  <a href="#" title="">News</a>
+                  <!-- 마우스 오버시 나오는 글자 -->
+                  <span class="fill">News</span>
+              </li>
+              
+              <li>
+                  <a href="#" title="">Gallery</a>
+                  <!-- 마우스 오버시 나오는 글자 -->
+                  <span class="fill">Gallery</span>
+              </li>
+              
+              <li>
+                  <a href="#" title="">Discography</a>
+                  <!-- 마우스 오버시 나오는 글자 -->
+                  <span class="fill">Discography</span>
+              </li>
+              
+              <li>
+                  <a href="#" title="">Career</a>
+                  <!-- 마우스 오버시 나오는 글자 -->
+                  <span class="fill">Career</span>
+              </li>
+              
+              <li>
+                  <a href="#" title="">Schedule</a>
+                  <!-- 마우스 오버시 나오는 글자 -->
+                  <span class="fill">Schedule</span>
+              </li>
+          </ul>
+      </nav>
+   </section>
+   
+   <!-- sns 사이드 바 -->
+   <div class="snsBtn">
+       <ul>
+           <li>
+               <a href="https://www.instagram.com/skuukzky/">
+                   <i class="fab fa-instagram"></i><span class="bg"></span>
+               </a>
+           </li>
+           
+           <li>
+               <a href="https://twitter.com/Suzy">
+                   <i class="fab fa-twitter"></i><span class="bg"></span>
+               </a>
+           </li>
+           
+           <li>
+               <a href="https://www.youtube.com/channel/UC7ukOKu7-6G-m5d4hOXrhfQ">
+                   <i class="fab fa-youtube"></i><span class="bg"></span>
+               </a>
+           </li>
+           
+           <li>
+               <a href="https://www.vlive.tv/video/20999">
+                   <i class="far fa-hand-peace"></i><span class="bg"></span>
+               </a>
+           </li>
+       </ul>
+   </div>
+   
+   <!-- 햄버거 메뉴 클릭시 나오는 전체 메뉴 -->
+   <div class="toggleMenu">
+       <div class="bgText">MENU</div>
+       <nav>
+           <ul>
+               <li class="clearfix">
+                   <div class="bar"></div>
+                   <a href="#" title="">Profile</a>
+               </li>
+               
+               <li class="clearfix">
+                   <div class="bar"></div>
+                   <a href="#" title="">News</a>
+               </li>
+               
+               <li class="clearfix">
+                   <div class="bar"></div>
+                   <a href="#" title="">Gallery</a>
+               </li>
+               
+               <li class="clearfix">
+                   <div class="bar"></div>
+                   <a href="#" title="">Discography</a>
+               </li>
+               
+               <li class="clearfix">
+                   <div class="bar"></div>
+                   <a href="#" title="">Career</a>
+               </li>
+               
+               <li class="clearfix">
+                   <div class="bar"></div>
+                   <a href="#" title="">Schedule</a>
+               </li>
+           </ul>
+       </nav>
+   </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

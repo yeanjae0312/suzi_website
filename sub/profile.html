@@ -1,0 +1,119 @@
+
+       <link rel="stylesheet" href="./css/profile.css" type="text/css">
+       
+       <div class="title">
+           <h3>SUZI</h3>
+           <h3>SUZI</h3>
+           <div class="titleBar"></div>
+           <p class="txt">SINGER/ACTOR</p>
+       </div>
+           
+           <div class="content">
+               <ul class="left">
+                   <li>생일</li>
+                   <li>키</li>
+                   <li>소속사</li>
+                   <li>소속그룹</li>
+                   <li>학력사항</li>
+               </ul>
+               
+               <ul class="right">
+                   <li>1994.10.10</li>
+                   <li>168cm</li>
+                   <li>매니지먼트 숲</li>
+                   <li>전 미쓰에이</li>
+                   <li>서울공연예술고등학교</li>
+               </ul>
+           </div>
+           
+           <!-- 프로필 사진과 제목 -->
+           <div class="photo">
+               <img src="./images/suzi_profile_4.jpg" alt="지코프로필사진">
+               <div class="lineBox"></div>
+               <div class="phototitle">Profile</div>
+           </div>
+           
+           <!-- 서브페이지에서만 사용하는 내비게이션 -->
+           <nav class="sub_nav">
+               <ul>
+                   <li class="active"><a href="#">Profile</a></li>
+                   <li><a href="#">News</a></li>
+                   <li><a href="#">Gallery</a></li>
+                   <li><a href="#">Discography</a></li>
+                   <li><a href="#">Career</a></li>
+                   <li><a href="#">Schedule</a></li>
+               </ul>
+           </nav>
+           
+           
+<script>
+    $(function(){
+        //마우스 오버 애니메이션
+        $('.sub_nav > ul > li').hover(function(){
+            $(this).toggleClass('hover');
+            $(this).siblings().toggleClass('opa');
+        });
+        
+        //메뉴 클릭시 해당하는 페이지를 load하기
+        $('.sub_nav > ul > li:eq(0) > a').click(function(){
+            return false;
+        });
+        
+        $('.sub_nav > ul > li:eq(1) > a').click(function(){
+            subLink('./sub/news.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(2) > a').click(function(){
+            subLink('./sub/gallery.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(3) > a').click(function(){
+            subLink('./sub/discography.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(4) > a').click(function(){
+            subLink('./sub/producing.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(5) > a').click(function(){
+            subLink('./sub/schedule.html');
+        });
+        
+        //클릭한 a요소의 주소를 받아서 함수에 넘겨준다.
+        function subLink(url){
+            //위에서 받은 매개변수값을 아래에 삽입하여 페이지가 나오게 한다.
+            $('section').load(url);
+        }
+        
+    });
+</script>
+       
+       
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

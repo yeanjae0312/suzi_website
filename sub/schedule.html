@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="./css/schedule.css" type="text/css">
+    
+    <h3>schedule</h3>
+     
+     <!-- 서브페이지에서만 사용하는 내비게이션 -->
+           <nav class="sub_nav">
+               <ul>
+                   <li><a href="#">Profile</a></li>
+                   <li><a href="#">News</a></li>
+                   <li><a href="#">Gallery</a></li>
+                   <li><a href="#">Discography</a></li>
+                   <li><a href="#">Career</a></li>
+                   <li class="active"><a href="#">Schedule</a></li>
+               </ul>
+           </nav>
+           
+           <iframe src="http://yeanjae0312.dothome.co.kr/bbs/bbs/board.php?bo_table=schedule" frameborder="0" scrolling="no"></iframe>
+           
+        <script>
+            $(function(){
+                
+                //마우스 오버 애니메이션
+        $('.sub_nav > ul > li').hover(function(){
+            $(this).toggleClass('hover');
+            $(this).siblings().toggleClass('opa');
+        });
+        
+        //메뉴 클릭시 해당하는 페이지를 load하기
+        $('.sub_nav > ul > li:eq(0) > a').click(function(){
+            subLink('./sub/profile.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(1) > a').click(function(){
+            subLink('./sub/news.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(2) > a').click(function(){
+            subLink('./sub/gallery.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(3) > a').click(function(){
+            subLink('./sub/discography.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(4) > a').click(function(){
+            subLink('./sub/producing.html');
+        });
+        
+        $('.sub_nav > ul > li:eq(5) > a').click(function(){
+            return false;
+        });
+        
+        //클릭한 a요소의 주소를 받아서 함수에 넘겨준다.
+        function subLink(url){
+            //위에서 받은 매개변수값을 아래에 삽입하여 페이지가 나오게 한다.
+            $('section').load(url);
+        }
+                
+            });
+       
+        </script>
